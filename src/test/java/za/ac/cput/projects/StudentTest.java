@@ -66,5 +66,11 @@ public class StudentTest {
         Assert.assertEquals(std,stds);
 
     }
+    @Test( timeout = 10000)
+    public void testObjectTimeout()
+    {
+        Assert.assertEquals(std,stds);
+        while(true);
+    }
     
 }
