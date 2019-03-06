@@ -52,7 +52,7 @@ public class StudentTest {
 
     }
 
-    @Test
+    @Test//(expected = AssertionError.class)
     public void testObjectIdentity() {
 
 
@@ -66,5 +66,5 @@ public class StudentTest {
         Assert.assertEquals(std,stds);
 
     }
-
+    
 }
