@@ -29,7 +29,7 @@ public class StudentTest {
 
 
     }
-
+    @Ignore //Disabling test
     @Test
     public void getStdId() {
 
@@ -52,21 +52,21 @@ public class StudentTest {
 
     }
 
-    @Test//(expected = AssertionError.class)
+    @Test(expected = AssertionError.class)// Failing test and testing identity test
     public void testObjectIdentity() {
 
 
-        Assert.assertSame(std,stds);
+        Assert.assertSame(std,std);
 
     }
 
     @Test
-    public void testObjectEquality()
+    public void testObjectEquality()// Object test
     {
         Assert.assertEquals(std,stds);
 
     }
-    @Test( timeout = 10000)
+    @Test( timeout = 10000)// timeout 
     public void testObjectTimeout()
     {
         Assert.assertEquals(std,stds);
